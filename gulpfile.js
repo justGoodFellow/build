@@ -1,3 +1,6 @@
+/* eslint no-undef: "error" */
+/* eslint-env node */
+
 'use strict';
 
 var autoprefixer = require('autoprefixer');

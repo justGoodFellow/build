@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "main": "templates/index.pug",
-  "repository": "",
+  "name": "test",
+  "main": "pug/pages/index.pug",
+  "repository": "git@github.com:justGoodFellow/build.git",
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "scripts": {
     "test": "editorconfig-tools check *",
