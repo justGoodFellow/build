@@ -1,24 +1,24 @@
 {
-  "name": "gllacy",
-  "main": "pug/pages/index.pug",
-  "repository": "git@github.com:justGoodFellow/gllacy.git",
-  "description": "Учебный проект - Глейси",
+  "name": "build",
+  "description": "Основа проектов",
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
+  "homepage": "https://github.com/justGoodFellow/build",
+  "private": true,
+  "engines": {
+    "node": "8.15.0"
+  },
   "scripts": {
     "test": "editorconfig-tools check *",
     "build": "gulp",
     "start": "gulp && gulp serve"
   },
-  "engines": {
-    "node": "8.14.0"
-  },
   "devDependencies": {
-    "autoprefixer": "^9.4.3",
+    "autoprefixer": "^9.4.7",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
     "editorconfig-tools": "^0.1.1",
-    "eslint": "^5.11.0",
+    "eslint": "^5.12.1",
     "eslint-config-htmlacademy": "^0.5.2",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",

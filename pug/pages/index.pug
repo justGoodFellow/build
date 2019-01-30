@@ -1,5 +1,11 @@
-extends ../layouts/base.pug
+doctype html
+html(lang='ru')
+  include ../layouts/head.pug
+  body
+    include ../layouts/page-header.pug
 
-block content
-  h1
-    | Content
+    h1
+      | Content
+
+    include ../layouts/page-footer.pug
+    script(src='js/concatenated.js')
