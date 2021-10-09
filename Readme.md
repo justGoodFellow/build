@@ -1,11 +1,11 @@
 #### Установка зависимостей проекта
-		npm i
+	npm i
 
 #### Сборка и запуск localhost
-		npm start
+	npm start
 
 #### Сборка
-		npm run build
+	npm run build
 
 #### Тестирование
-		npm test
+	npm test
