@@ -1,10 +1,10 @@
 {
-  "extends": "stylelint-config-htmlacademy",
+	"extends": "stylelint-config-htmlacademy",
 
-  "rules": {
-    "color-named": "always-where-possible",
-    "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}],
-    "string-quotes": "single"
-  }
+	"rules": {
+		"color-named": "always-where-possible",
+		"declaration-no-important": true,
+		"indentation": ["tab", {"ignore": ["inside-parens"]}],
+		"string-quotes": "single"
+	}
 }

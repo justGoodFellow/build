@@ -22,112 +22,112 @@ var concat = require('gulp-concat');
 var jsminify = require('gulp-minify');
 
 function clean() {
-  return del(['build']);
+	return del(['build']);
 }
 
 function copy() {
-  return gulp.src([
-    'fonts/**/*.{woff,woff2,otf,ttf,eot}',
-    'img/**'
-  ], {
-    base: '.'
-  })
-    .pipe(gulp.dest('build'));
+	return gulp.src([
+		'fonts/**/*.{woff,woff2,otf,ttf,eot}',
+		'img/**'
+	], {
+		base: '.'
+	})
+		.pipe(gulp.dest('build'));
 }
 
 function templates() {
-  return gulp.src('pug/pages/*.pug')
-    .pipe(plumber())
-    .pipe(pug({
-      pretty: true
-    }))
-    .pipe(gulp.dest('build'))
-    .pipe(server.reload({
-      stream: true
-    }));
+	return gulp.src('pug/pages/*.pug')
+		.pipe(plumber())
+		.pipe(pug({
+			pretty: true
+		}))
+		.pipe(gulp.dest('build'))
+		.pipe(server.reload({
+			stream: true
+		}));
 }
 
 function styles() {
-  return gulp.src('sass/style.scss')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer(),
-      objectimg(),
-      mqpacker({
-        sort: true
-      })
-    ]))
-    .pipe(gulp.dest('build/css'))
-    .pipe(minify())
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css'))
-    .pipe(server.reload({
-      stream: true
-    }));
+	return gulp.src('sass/style.scss')
+		.pipe(plumber())
+		.pipe(sass())
+		.pipe(postcss([
+			autoprefixer(),
+			objectimg(),
+			mqpacker({
+				sort: true
+			})
+		]))
+		.pipe(gulp.dest('build/css'))
+		.pipe(minify())
+		.pipe(rename('style.min.css'))
+		.pipe(gulp.dest('build/css'))
+		.pipe(server.reload({
+			stream: true
+		}));
 }
 
 function scripts() {
-  return gulp.src('./js/*.js')
-    .pipe(plumber())
-    .pipe(concat('concatenated.js'))
-    .pipe(jsminify({
-      ext: {
-        src: '.js',
-        min: '.min.js'
-      },
-    }))
-    .pipe(gulp.dest('./build/js'));
+	return gulp.src('./js/*.js')
+		.pipe(plumber())
+		.pipe(concat('concatenated.js'))
+		.pipe(jsminify({
+			ext: {
+				src: '.js',
+				min: '.min.js'
+			},
+		}))
+		.pipe(gulp.dest('./build/js'));
 }
 
 function images() {
-  return gulp.src('build/img/**/*.{png,jpg,gif,svg}')
-    .pipe(imagemin([
-      imagemin.optipng({
-        optimizationLevel: 3
-      }),
-      imagemin.jpegtran({
-        progressive: true
-      }),
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest('build/img'));
+	return gulp.src('build/img/**/*.{png,jpg,gif,svg}')
+		.pipe(imagemin([
+			imagemin.optipng({
+				optimizationLevel: 3
+			}),
+			imagemin.jpegtran({
+				progressive: true
+			}),
+			imagemin.svgo()
+		]))
+		.pipe(gulp.dest('build/img'));
 }
 
 function symbols() {
-  return gulp.src('build/img/*.svg')
-    .pipe(svgmin())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('symbols.svg'))
-    .pipe(gulp.dest('build/img'));
+	return gulp.src('build/img/*.svg')
+		.pipe(svgmin())
+		.pipe(svgstore({
+			inlineSvg: true
+		}))
+		.pipe(rename('symbols.svg'))
+		.pipe(gulp.dest('build/img'));
 }
 
 function serve() {
-  server.init({
-    server: 'build',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
+	server.init({
+		server: 'build',
+		notify: false,
+		open: true,
+		cors: true,
+		ui: false
+	});
 
-  gulp.watch('pug/**/*.pug', templates);
-  gulp.watch('sass/**/*.scss', styles);
-  gulp.watch('js/**/*.js', scripts);
+	gulp.watch('pug/**/*.pug', templates);
+	gulp.watch('sass/**/*.scss', styles);
+	gulp.watch('js/**/*.js', scripts);
 }
 
 var build = gulp.series(
-    clean,
-    copy,
-    gulp.parallel(
-        templates,
-        styles,
-        scripts,
-        images,
-        symbols
-    )
+		clean,
+		copy,
+		gulp.parallel(
+				templates,
+				styles,
+				scripts,
+				images,
+				symbols
+		)
 );
 
 exports.clean = clean;
