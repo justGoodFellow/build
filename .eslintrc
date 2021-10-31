@@ -5,5 +5,6 @@
 	"extends": "htmlacademy/es5",
 	"rules": {
 		// Additional rules...
+		"indent": ["error", "tab"]
 	}
 }

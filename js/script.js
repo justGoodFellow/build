@@ -1,3 +1,3 @@
 'use strict';
 
-console.log('Test');
+document.body.style.color = 'cornflowerblue';
