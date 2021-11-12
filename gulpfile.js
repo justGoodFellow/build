@@ -11,7 +11,7 @@ var del = require('del');
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var minify = require('gulp-csso');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
@@ -86,7 +86,7 @@ function images() {
 			imagemin.optipng({
 				optimizationLevel: 3
 			}),
-			imagemin.jpegtran({
+			imagemin.mozjpeg({
 				progressive: true
 			}),
 			imagemin.svgo()

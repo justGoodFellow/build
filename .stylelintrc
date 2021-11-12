@@ -1,10 +1,14 @@
 {
-	"extends": "stylelint-config-htmlacademy",
-
+	"extends": [
+		"stylelint-config-standard-scss"
+	],
 	"rules": {
 		"color-named": "always-where-possible",
+		"declaration-empty-line-before": null,
 		"declaration-no-important": true,
 		"indentation": ["tab", {"ignore": ["inside-parens"]}],
+		"scss/comment-no-empty": null,
+		"scss/double-slash-comment-empty-line-before": null,
 		"string-quotes": "single"
 	}
 }
