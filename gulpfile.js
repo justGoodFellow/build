@@ -1,4 +1,4 @@
-/* eslint no-undef: 'error' */
+/* eslint no-undef: "error" */
 /* eslint-env node */
 
 'use strict';
@@ -50,7 +50,7 @@ function templates() {
 function styles() {
 	return gulp.src('sass/style.scss')
 		.pipe(plumber())
-		.pipe(sass())
+		.pipe(sass.sync())
 		.pipe(postcss([
 			autoprefixer(),
 			objectimg(),
@@ -87,6 +87,7 @@ function images() {
 				optimizationLevel: 3
 			}),
 			imagemin.mozjpeg({
+				quality: 100,
 				progressive: true
 			}),
 			imagemin.svgo()
