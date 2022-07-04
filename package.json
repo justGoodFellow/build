@@ -5,7 +5,7 @@
 	"homepage": "https://github.com/justGoodFellow/build",
 	"private": true,
 	"engines": {
-		"node": "14.19.3"
+		"node": "16.15.1"
 	},
 	"scripts": {
 		"editorconfig": "editorconfig-cli",
