@@ -38,7 +38,7 @@
 		"css-mqpacker": "^7.0.0",
 		"del": "^6.1.1",
 		"eslint": "^8.19.0",
-		"eslint-config-htmlacademy": "^4.1.0",
+		"eslint-config-htmlacademy": "^6.0.0",
 		"gulp": "^4.0.2",
 		"gulp-concat": "^2.6.1",
 		"gulp-csso": "^4.0.1",
@@ -57,7 +57,6 @@
 		"sass": "^1.53.0",
 		"stylelint": "^14.9.1",
 		"stylelint-config-htmlacademy": "^0.1.12",
-		"stylelint-config-standard-scss": "^2.0.1"
-	},
-	"dependencies": {}
+		"stylelint-config-standard-scss": "^4.0.0"
+	}
 }
