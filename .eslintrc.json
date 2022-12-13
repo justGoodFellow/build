@@ -1,8 +1,10 @@
 {
 	"env": {
-		"browser": true
+		"browser": true,
+		"es2017": true,
+		"node": true
 	},
-	"extends": "htmlacademy/es5",
+	"extends": "htmlacademy/vanilla",
 	"rules": {
 		// Additional rules...
 		"indent": ["error", "tab"]

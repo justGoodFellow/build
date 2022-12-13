@@ -5,14 +5,13 @@
 	"disallowIdAttributeWithStaticValue": true,
 	"disallowMultipleLineBreaks": true,
 	"disallowSpacesInsideAttributeBrackets": true,
-	// "maximumLineLength": 80,
 	"requireClassLiteralsBeforeAttributes": true,
 	"requireIdLiteralsBeforeAttributes": true,
 	"requireLowerCaseAttributes": true,
 	"requireLowerCaseTags": true,
 	"requireSpecificAttributes": [
 		{
-			"img": [ "alt" ]
+			"img": ["alt"]
 		}
 	],
 	"validateAttributeQuoteMarks": "'",
