@@ -1,12 +1,11 @@
 {
-	"plugins": ["stylelint-order"],
 	"extends": [
 		"stylelint-config-htmlacademy",
 		"stylelint-config-recommended-scss"
 	],
+	"plugins": ["stylelint-order"],
 	"rules": {
 		"color-named": "always-where-possible",
-		"declaration-no-important": true,
 		"font-weight-notation": "named-where-possible",
 		"indentation": ["tab", { "ignore": ["inside-parens"] }],
 		"max-line-length": 80,

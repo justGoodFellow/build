@@ -4,9 +4,10 @@
 		"es2017": true,
 		"node": true
 	},
-	"extends": "htmlacademy/vanilla",
+	"extends": ["eslint:recommended", "htmlacademy/vanilla"],
 	"rules": {
 		// Additional rules...
-		"indent": ["error", "tab"]
+		"indent": ["error", "tab"],
+		"object-curly-spacing": ["error", "always"]
 	}
 }

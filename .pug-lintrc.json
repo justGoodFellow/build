@@ -5,6 +5,7 @@
 	"disallowIdAttributeWithStaticValue": true,
 	"disallowMultipleLineBreaks": true,
 	"disallowSpacesInsideAttributeBrackets": true,
+	"maximumLineLength": 80,
 	"requireClassLiteralsBeforeAttributes": true,
 	"requireIdLiteralsBeforeAttributes": true,
 	"requireLowerCaseAttributes": true,
